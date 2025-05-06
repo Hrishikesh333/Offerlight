@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "311604552227",
+    "project_id": "offerlite-d6977",
+    "storage_bucket": "offerlite-d6977.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311604552227:android:395db3f3844f3e059bc796",
+        "android_client_info": {
+          "package_name": "com.example.mainproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7UvUUjQb0j9kwX0D-ESg9VeQEeriUCe0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
