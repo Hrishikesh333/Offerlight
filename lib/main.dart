@@ -1,11 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mainproject/Navigation%20bar%20shopowner.dart';
+import 'package:mainproject/Shop/Navigation%20bar%20shopowner.dart';
 
+import 'Admin/Adminhomepage.dart';
+import 'Admin/Adminnotification.dart';
+import 'Admin/Adminnotifiview.dart';
+import 'Admin/Adminprofile.dart';
+import 'Admin/Admintabar.dart';
+import 'Admin/Shoponrremove.dart';
+import 'Admin/Userremove.dart';
+import 'Admin/Userspage.dart';
+import 'Admin/radeemapplyedurs.dart';
 import 'Getstart.dart';
+import 'Shop/Addshoptime.dart';
+import 'Shop/Appliedusers.dart';
+import 'Shop/Fooddtlsadd.dart';
+import 'Shop/Foodviewpage.dart';
+import 'Shop/Homepage.dart';
+import 'Shop/Offersadd.dart';
+import 'Shop/Profileeditpage.dart';
+import 'Shop/Redeemcode.dart';
+import 'Shop/Shopaboutadd.dart';
+import 'Shop/Shopdtlsadd.dart';
+import 'Shop/Shopnotification.dart';
+import 'Shop/Ratingpage.dart';
+import 'Shop/Shopownerprfledt.dart';
+import 'Shop/Shopownerprofile.dart';
+import 'Shop/applieduserdtls.dart';
 import 'Splashpage.dart';
-import 'Usernavibar.dart';
+import 'Users/Usernavibar.dart';
+import 'Users/Aboutshop.dart';
+import 'Users/Fooddetials.dart';
 import 'Users/Homepage.dart';
+import 'Users/Offerstabbar.dart';
+import 'Users/Profileedit.dart';
+import 'Users/Ratingpage.dart';
+import 'Users/Redeempage.dart';
+import 'Users/Shoptimes.dart';
+import 'Users/Usernotification.dart';
+import 'Users/Userprofile.dart';
+import 'Users/Viewpage.dart';
 import 'adminnavibar.dart';
 
 void main() {
@@ -22,7 +56,8 @@ class MyApp extends StatelessWidget {
       designSize: const Size(412, 892),
       splitScreenMode: true,
       minTextAdapt: true,
-      builder: (context, child) => MaterialApp(debugShowCheckedModeBanner: false,
+      builder: (context, child) => MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           theme: ThemeData(
             // This is the theme of your application.
@@ -43,8 +78,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: Homepage()
-      ),
+          home: Usernavibar()),
     );
   }
 }

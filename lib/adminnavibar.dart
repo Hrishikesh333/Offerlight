@@ -1,20 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mainproject/Admin/Adminnotifiview.dart';
+import 'package:mainproject/Users/Homepage.dart';
+import 'package:mainproject/Users/Viewpage.dart';
 
-void main() {
-  runApp(Adminnavibar());
-}
+import 'Admin/Admintabar.dart';
+import 'Admin/radeemapplyedurs.dart';
 
-class Adminnavibar extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: NavigationBarExample(),
-    );
-  }
-}
+
 
 class NavigationBarExample extends StatefulWidget {
   @override
@@ -26,15 +20,13 @@ class _NavigationBarExampleState extends State<NavigationBarExample> {
 
   // Screens for each tab
   final List<Widget> _screens = [
-    Center(child: Text("Home Page", style: TextStyle(fontSize: 24))),
-    Center(child: Text("Profile", style: TextStyle(fontSize: 24))),
-    Center(child: Text("notification", style: TextStyle(fontSize: 24))),
+    Admintabar(),Radeemapplyedurs(),Adminnotifiview()
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("")),
+      // appBar: AppBar(title: Text("")),
       body: _screens[_selectedIndex], // Display selected screen
 
       // Bottom Navigation Bar
@@ -46,7 +38,7 @@ class _NavigationBarExampleState extends State<NavigationBarExample> {
           });
         },
         items: [
-          BottomNavigationBarItem(
+          BottomNavigationBarItem(backgroundColor: Colors.white,
               icon: Icon(
                 Icons.home,
                 color: Colors.black,
