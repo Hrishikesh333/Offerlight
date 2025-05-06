@@ -3,33 +3,31 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mainproject/Users/Offerstabbar.dart';
-import 'package:mainproject/Users/Viewpage.dart';
+import 'package:mainproject/Shop/Foodviewpage.dart';
+import 'package:mainproject/Shop/Shopnotification.dart';
 
-class Homepagee extends StatefulWidget {
-  const Homepagee({super.key});
+class Homepages extends StatefulWidget {
+  const Homepages({super.key});
 
   @override
-  State<Homepagee> createState() => _HomepageeState();
+  State<Homepages> createState() => _HomepagesState();
 }
 
-class _HomepageeState extends State<Homepagee> {
+class _HomepagesState extends State<Homepages> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(
-            height: 50.h,
-          ),
           Row(
             children: [
               Text(
                 '  Offerlight',
                 style: GoogleFonts.poppins(
-                    fontSize: 35.sp,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.red),
+                  fontSize: 35.sp,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red,
+                ),
               ),
             ],
           ),
@@ -42,53 +40,48 @@ class _HomepageeState extends State<Homepagee> {
                 radius: 28.r,
                 backgroundImage: AssetImage('assets/img.png'),
               ),
-              Text(
-                '  Hi Adilmubark',
-                style: GoogleFonts.poppins(
-                    fontSize: 22.sp,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.black),
-              ),
-              Spacer(),
-              Icon(
-                CupertinoIcons.bell_solid,
-                color: Colors.red,
-              ),
-              SizedBox(
-                width: 10.w,
+              Row(
+                children: [
+                  Text(
+                    '  Hi Adilmubark',
+                    style: GoogleFonts.poppins(
+                      fontSize: 22.sp,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black,
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 110.w,
+                      ),
+                      InkWell(onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) {
+                          return Shopnotification();
+                        },));
+                      },
+                        child: Icon(
+                          CupertinoIcons.bell_solid,
+                          color: Colors.red,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ],
           ),
-          SizedBox(
-            height: 20.h,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
-            child: TextFormField(
-              decoration: InputDecoration(
-                contentPadding: EdgeInsets.symmetric(horizontal: 15),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                hintText: 'Search',
-                prefixIcon: Icon(
-                  Icons.search,
-                  color: Colors.black,
-                ),
-              ),
-            ),
-          ),
           Expanded(
-            child: InkWell(onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return Viewpage();
-              },));
-            },
-              child: ListView.builder(
-                itemCount: 5,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 1),
+            child: ListView.builder(
+              itemCount: 5,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 1),
+                  child: InkWell(onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return Foodviewpage();
+                    },));
+                  },
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.r),
@@ -164,9 +157,9 @@ class _HomepageeState extends State<Homepagee> {
                         ),
                       ),
                     ),
-                  );
-                },
-              ),
+                  ),
+                );
+              },
             ),
           ),
         ],
